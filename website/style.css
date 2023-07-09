@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+  }*
+#headerWrap {
+  width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  background-color: #f71212;
+  margin: 0 auto;
+  float: left;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+}
+
+.bannerWrap {
+  width: 1000px;
+  height: 200px;
+  background-color: #2B38C8;
+  float: right;
+  
+}
+
+.bannerWrap img {
+  width: 990px;
+  height: 190px;
+  margin: 5px 5px;
+  
+}
+#WLC{
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+  font-size: 40px;
+  color: #f71212;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-style: inherit;
+}
+
+header {
+  
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  word-spacing: 30px;
+  font-size: 25px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.btn{
+  background-color: #2B38C8;
+  border-radius: 40px;
+  padding: 10px;
+}
+nav ul li a:hover{
+  color: rgb(240, 14, 25);
+}
+nav ul li{
+ display: inline-block;
+}
+nav ul a{
+  text-decoration: none;
+  color: aliceblue;
+}
+/*#mainWrap{
+      width: 1200px;
+      height: 600px;}
+     .imageWrap img{
+      width: 1200px;
+      height: 600px;
+    }
+    */
+#homeWrap{
+  width: 1200px;
+  height: 400px;
+  margin: auto;
+  padding: 40px;
+  
+}
+
+.text{
+  width: 650px;
+  height: 400px;
+  font-size: 30px;
+  color: rgb(71, 117, 10);
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: right;
+  font-style: initial;
+}
+ .text img{
+  width: 180px;
+  height: 150px;
+ }
+ .box{
+  width: 500px;
+  height: 400px;
+  float: left;
+  }
+  .box img{
+    width: 500px;
+    height: 400px;
+    float: left;
+   }
+ 
+ #aboutWrap{
+  width: 1200px;
+  height: 900px;
+  margin: auto;
+  text-align: nterce;
+  font-family: sans-serif;
+  padding: 30px;
+  font-size: 40px;
+ }
+ .table  h2{
+  font-size: 50px;
+  color: #f71212;
+ }
+ .sub{
+  color: #f71212;
+ }
+ .crs{color: rgb(201, 26, 157);}
+  
+#faciWrap{
+  width: 1200px;
+  height: 600px;
+  margin: auto;
+  font-size: 30px;
+  color: rgb(110, 19, 69);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.library{
+  width: 300px;
+  height: 385px;
+float: left;
+padding: 15px;
+color: #f78708;
+}
+.library img{
+  width: 200px;
+  height: 200px;
+}
+
+.science{
+  width: 400px;
+  height: 385px;
+float: right;
+padding: 15px;
+color: #f78708;
+}
+
+.science img{
+  width: 300px;
+  height: 250px;}
+.computer{
+  width: 400px;
+  height: 385px;
+  float: right;
+  padding: 15px;
+  color: #f78708;
+}
+.computer img{
+  width: 300px;
+  height: 300px;}
+
+.li{
+  color: #bd520c;
+  font-style: oblique;
+}
+.f{
+  color:#bd0c32;
+  text-align: center;
+  
+}
+.pp{
+  text-align: center;
+  font-size: 35px;
+  font-style: italic;
+}
+#CTCWrap{
+  width: 1150px;
+  height: 400;
+  background-color: rgb(112, 19, 187);
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 35px;
+  color: antiquewhite;
+  padding: 5px;
+  list-style-type: none;
+}
+#photos {
+  width: 1200px;
+  height: 1000px;
+  margin: 0 auto;
+  
+}
+
+.photos img {
+  width: 350px;
+  height:200px;
+  margin: 0 auto;
+ 
+}
+
+footer {
+  width: 1200px;
+  height: 230px;
+  margin: 5px auto;
+  background: #723B05;
+  text-align: center;
+  padding: 30px;
+}
