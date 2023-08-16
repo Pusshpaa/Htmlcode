@@ -8,18 +8,28 @@
 </head>
 
 <body>
+    
     <div class="login-container">
+        <table>
         <form action="login.php" method="post">
-            <label for="role">Login as:</label>
-            <select id="role" name="role">
+            <tr><label for="role">Login as:</label>
+            <td><select id="role" name="role">
                 <option value="student">Student</option>
                 <option value="teacher">Teacher</option>
-            </select>
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-            <button><a type="button" href="register.php">Register</a></button>
+            </select></td>
+            </tr>
+            <tr>
+            <td><input type="text" name="username" placeholder="Username" ></td>
+            </tr>
+            <tr>
+           <td> <input type="password" name="password" placeholder="Password"></td>
+           </tr>
+            <tr>
+            <td><button type="submit">Login</button></td>
+            <td><button><a type="button" href="register.php">Register</a></button></td>
+            </tr>
         </form>
+        </table>
     </div>
 </body>
 </html>

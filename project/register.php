@@ -1,40 +1,48 @@
+<?php
+include('db.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $role_id = $_POST['role'];
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+
+    $query = "INSERT INTO `users`(`role_id`,`username`, `password`) VALUES ('$role_id','$username','$password'); ";
+    $result = mysqli_query($conn,$query);
+    if($result){
+        echo "<h1>A new user created successfully.</h1>";
+        echo "<script>setTimeout(\"location.href = 'index.php'; \",2000); </script>";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="container">
-        <form action="register.php" method="post">
-            <h2>Register</h2>
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <label for="role">Select :</label>
-            <select name="role" required>
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-            </select>
-            <button type="submit" name="register">Register</button>
+        <h2>Register</h2>
+        <table>
+        <form action="register.php" method="POST">
+        <tr><label for="role">Role:</label>
+        <td><select name="role">
+                <option value="1">Teacher</option>
+              <option value="2">Student</option>
+            </select><br></td>
+        </tr>
+        <tr>
+            <td><label for="username">Username:</label>
+            <input type="text" name="username"></td>
+        </tr>
+          <td> <label for="password">Password:</label>
+            <input type="password" name="password"></td>
+        </tr>
+           <td> <input type="submit" value="Register"></td>
         </form>
+        </table>
     </div>
 </body>
 </html>
-
-<?php
-
-
-if (isset($_POST['register'])) {
-    $u = $_POST['username'];
-    $p = $_POST['password'];
-    $role = $_POST['role'];
-
-    $sql = "INSERT INTO users (username, password, role) VALUES ('$u', '$p', '$role')";
-    
-    //if ($conn->query($sql) ===  TRUE) {
-      // echo "Registration successful!";
-   //} else {
-     //  echo "Error: " . $sql . "<br>" . $conn->error;
- // }
-}
-?>

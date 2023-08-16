@@ -1,25 +1,30 @@
 <?php
-session_start();
+include('db.php');
 
-// Simulated user data (replace this with database queries)
-$users = [
-    "student" => ["username" => "ram123", "password" => "ram@123"],
-    "teacher" => ["username" => "suta456", "password" => "sita@11"]
-];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $role = $_POST["role"];
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $role_id = $_POST['role'];
 
-    if (array_key_exists($role, $users) && $username === $users[$role]["username"] && $password === $users[$role]["password"]) {
-        $_SESSION["role"] = $role;
-        header("Location: dashboard_" . $role . ".php");
-        exit();
+    $stmt = $conn->prepare("SELECT * FROM `users` WHERE `role_id`= '$role_id' AND `username` = '$username' AND `password` ='$password'  ");
+    
+    $stmt->execute();
+    $stmt->bind_result( $role_id, $username, $password);
+    $stmt->fetch();
+
+    if (password_verify($password, $username)) {
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['role_id'] = $role_id;
+        header("Location: dashboard.php");
     } else {
-        // Handle invalid login
-        header("Location: index.php");
-        exit();
+        echo "Invalid login credentials.";
+        
     }
+
+    $stmt->close();
 }
+
+$conn->close();
 ?>
